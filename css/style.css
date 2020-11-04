@@ -1,1 +1,92 @@
-/* BEGINNING OF CSS STYLE SHEET /*
+/* BEGINNING OF CSS STYLE SHEET */
+header {
+    background-color: #eeeeee;
+    padding: 10px 10px;
+}
+
+/*FLEXBOX */
+nav ul {
+    display: flex; 
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 10px;
+}
+
+/*FLEX ITEMS */
+#link{
+    display: block;
+    border: 1px solid #fff;
+    border-radius: 20px;
+    padding: 5px 5px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    color: #fff;
+    background-color: #333;
+  }
+
+  #link:active {
+    background-color: royalblue; 
+  }
+
+
+
+  .image1, .image2, .image3 {
+      display: block;
+      margin-right: auto;
+      margin-left: auto;
+      height: 30vh;
+      width: 20vh;
+      padding-top: 5px;
+      padding-bottom: 5px;
+  }
+
+
+@media only screen and (min-width:768px) {
+    nav ul {
+        list-style-type: none;
+        color: #000000;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    h1{
+        text-align: center;
+    }
+  
+    nav li{
+        display: inline-block;
+        margin-right: 5px;
+        padding: 25px;
+        font-size: 15px;
+        color: #FFFFFF;
+        width: 150px;
+        text-align: center;
+
+
+        transition-property: color, background-color;
+        transition-duration: 1s;
+        transition-timing-function: ease-out;
+    }
+
+    .image1, .image2, .image3, .image4, .image5, .image6 {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        height: 45vh;
+        width: 27vh;
+    }
+  
+ 
+    .books {
+        display: grid;
+        grid-template-rows: 250px 250px 250px; 
+        grid-template-columns: 250px 250px 250px;
+        justify-content: center;
+        row-gap: 150px;
+    }
+
+

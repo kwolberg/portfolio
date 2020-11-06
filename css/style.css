@@ -1,45 +1,208 @@
 /* BEGINNING OF CSS STYLE SHEET */
-header {
-    background-color: #eeeeee;
-    padding: 10px 10px;
+
+/*applies to all pages*/
+html {
+    scroll-behavior: smooth;
 }
 
-/*FLEXBOX */
+.header_image {
+    background-size: cover;
+    background-position: center;
+    background-image: linear-gradient(rgba(255, 255, 255, 0.7),rgba(255,255,255,0.7)), url(../images/bookstack.jpg);
+    color: #000000;
+    height: 175px;
+    width: 100%;
+}
+h1 {
+    text-align: center;
+    padding-top: 15%;
+    font-size: 160%;
+    text-shadow: 2px 2px rgb(255, 255, 255);
+
+}
+    
+
 nav ul {
     display: flex; 
-    flex-direction: column;
+    flex-direction: row;
     justify-content: space-around;
     padding: 10px;
+    background-color:#eeeeee;
 }
 
-/*FLEX ITEMS */
-#link{
-    display: block;
+li a{
+    display: flex;
+    flex-basis: 1 1 0px;
     border: 1px solid #fff;
-    border-radius: 20px;
     padding: 5px 5px;
     text-align: center;
     text-decoration: none;
-    font-size: 16px;
+    font-size: 75%;
     color: #fff;
     background-color: #333;
-  }
+}
 
-  #link:active {
-    background-color: royalblue; 
-  }
+li a:hover {
+    background-color: darkgrey;  
+}
+
+nav .current{
+    font-weight: bold;
+    background-color: green; 
+}
+
+#skip a {
+    background: green;
+    color: #fff;
+    position: absolute;
+    transform: translateY(-500%);
+}
+
+#skip a:focus {
+    transform: translateY(0%);
+}
+
+
+/*applies to home/index page*/
+
+button{
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    display: block;
+    margin: 5px auto 5px 10px;
+    padding: 2px 5px;
+    text-decoration: none;
+    font-size: 12px;
+}
+
+
+p {
+    box-sizing: border-box;
+    text-align: left;
+    font-size: 17px;
+    padding-left: 10px;
+    padding-right: 10px;
+    hyphens: auto;
+}
+
+/*applies recommendations page*/
+h2 {
+    padding-left: 10px;
+    font-size: 25px;
+}
+
+.content-heads {
+    font-size: 20px;
+    padding-top: 5px;
+    text-decoration: underline;
+}
+
+.bookcollage {
+    height: 150px;
+    width: 350px;
+    display: block;
+    padding-top: 10px;
+    padding-bottom: 2px;
+    margin-left: auto;
+    margin-right: auto;
+    filter: grayscale(100%);
+
+}
+
+.bookstores{ 
+    height: 200px;
+    width: 300px;
+    display: block;
+    padding-top: 5px;
+    margin-left: auto;
+    margin-right: auto;
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%)
+    
+}
+
+
+.descriptor {
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-decoration: underline;
+
+}
+
+
+.image1, .image2, .image3, .image4, .image5, .image6, .image7, .image8, .image9{
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    height: 30vh;
+    width: 20vh;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.image3, .image6 {
+    padding-bottom: 10px;
+}
+
+
+/*applies to stores page*/
+#container{
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr; 
+    grid-template-columns: 50% 50%; 
+}
+
+.first_store {
+    grid-row: 1 / span 1; 
+    grid-column: 1 / span 1;
+}
+
+.first_store_img {
+    grid-row: 1 / span 1; 
+    grid-column: 2 / span 1;
+}
+.second_store {
+    grid-row: 2 / span 1; 
+    grid-column: 1 / span 1;
+}
+
+.second_store_img {
+    grid-row: 2 / span 1; 
+    grid-column: 2 / span 1;
+}
+
+.third_store{
+    grid-row: 3 / span 1; 
+    grid-column: 1 / span 1;
+}
+
+.third_store_img {
+    grid-row: 3 / span 1; 
+    grid-column: 2 / span 1;
+}
+
+
+.first_store p, .second_store p, .third_store p {
+    padding-top: 3%;
+    font-size: 100%;
+    text-align: left;
+}
+
+
+.storefront {
+    display: block;
+    width: 95%;
+    padding-top: 5em;
+    padding-right: 1em;
+}
 
 
 
-  .image1, .image2, .image3 {
-      display: block;
-      margin-right: auto;
-      margin-left: auto;
-      height: 30vh;
-      width: 20vh;
-      padding-top: 5px;
-      padding-bottom: 5px;
-  }
+
+
 
 
 @media only screen and (min-width:768px) {
@@ -72,14 +235,16 @@ nav ul {
         transition-timing-function: ease-out;
     }
 
-    .image1, .image2, .image3, .image4, .image5, .image6 {
+    .image1, .image2, .image3, .image4, .image5, .image6, .image7, .image8, .image9 {
         display: block;
         margin-left: auto;
         margin-right: auto;
         height: 45vh;
         width: 27vh;
     }
+
   
+
  
     .books {
         display: grid;
@@ -88,5 +253,6 @@ nav ul {
         justify-content: center;
         row-gap: 150px;
     }
+}
 
 

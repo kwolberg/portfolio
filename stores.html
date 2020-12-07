@@ -5,71 +5,117 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="css/html5reset.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script src="https://kit.fontawesome.com/8db82a5711.js" crossorigin="anonymous"></script>
     <title>Portfolio</title>
   </head>
   <body>
     <div id="skip"><a href="#main">Skip to Main Content</a></div>
     <header>
       <nav>
+        <button onclick = "navClick()" id="button" class="button"><i class="fa fa-bars fa-2x"></i></button>
+        <div class= "nav-menu" id = "nav-menu">
           <ul>
-            <li class="item"><a href="index.html">Home</a></li>
-            <li class="item"><a href="recommendations.html">Book Recommendations</a></li>
-            <li class="item"><a class= "current" href="stores.html">Book Stores</a></li>
-            <li class="item"><a href="about.html">About Me</a></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="recommendations.html">Recommendations</a></li>
+            <li><a class="current" href="stores.html">Stores</a></li>
+            <li><a href="about.html">About Me</a></li>
+            <li><a href="contact.html">Contact</a></li>
           </ul>
+        </div>
       </nav>
-      <div class = "header_image">
-          <h1>Bookstores</h1>
-          <h3>Buy from these stores online! (or in person)</h3>
-      </div>
+      <script>
+        function navClick () {  
+          x = document.getElementById("nav-menu")
+          if (x.style.display === "block") {
+            x.style.display = "none";
+          }
+          else {
+            x.style.display = "block";
+          }
+        }
+      </script>
     </header>
+
+    <div class = "stores-head-container">
+      <h1>Book Stores</h1>
+      <p>Buy a new book - in person or online!</p>
+    </div>
 
 
     <main id="main">
-      <div id="container"> 
-        <div class="first_store">
-          <h2>Semicolon Bookstore</h2>
-          <p>Semicolon Bookstore is located in Chicago, IL. It is Chicago's  only
-            Black woman-owned independent bookstore and gallery space. Semicolon 
-            Bookstore aims to create a welcoming space for their readers.  Semicolon 
-            Bookstore has a '#ClearTheShelves' initiative where they invite Chicago Public School students to the store every month 
-            to take home books free of charge.
-          </p>
+      <div id="stores-container">
+        <div class='flip-gallery'>
+          <div class="flip-card flip-card1">
+            <div class="flip-card-inner">
+              <a href="#flip-card-inner" id="flip-card-inner">
+                <div class="flip-card-front">
+                  <div>
+                    <img src="images/semicolon-bookstore.jpg" alt="Semicolon Store Front" class="flipimg1">
+                  </div>
+                </div>
+              </a>
+              <div class="flip-card-back">
+                <p>
+                  <b>Semicolon Bookstore</b> is located in Chicago, IL. It is Chicago's only Black woman-owned independent bookstore and gallery space. 
+                  Semicolon Bookstore aims to create a welcoming space for their readers. 
+                  Semicolon Bookstore has a '#ClearTheShelves' initiative where they invite Chicago Public School students 
+                  to the store every month to take home books free of charge.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="flip-card flip-card2">
+            <div class="flip-card-inner">
+              <a href="#flip-card-inner" id="flip-card-inner">
+                <div class="flip-card-front">
+                  <div>
+                    <img src="images/harriettsstorefront.jpg" alt="Harriett's Store Front" class="flipimg2">
+                  </div>
+                </div>
+              </a>
+              <div class="flip-card-back">
+                <p>
+                  Named after Harriett Tubman, <b>Harriett's Books</b> in Philadelphia, PA celebrates female activists and authors. this Philadelphia bookshop celebrates female activists and authors. 
+                  The store is also running a program, called "Essentials for Essentials" where customers can purchase books that 
+                  go directly to essential workers fighting the coronavirus.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="flip-card flip-card3">
+            <div class="flip-card-inner">
+              <a href="##flip-card-inner" id="flip-card-inner">
+                <div class="flip-card-front">
+                  <div>
+                    <img src="images/literatistorefront.jpg" alt="Literati Store Front" class="flipimg3">
+                  </div>
+                </div>
+              </a>
+              <div class="flip-card-back">
+                <p>
+                  Located right in downtown Ann Arbor is our very own <b>Literati Bookstore</b>. Literati is an independent bookstore that has a variety of books, and a variety of events - 
+                  including author readings, book clubs, and poetry nights. I love Literati; and if you are in the Ann Arbor area you should definitely check out this store!
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="first_store_img"> 
-          <img src="images/semicolonbookstore.jpg" class="storefront" alt="Semicolon Bookstore Inside"> 
-          <img src="images/semicolonmap.jpg" class="storefront" alt="Semicolon Bookstore Location Map"> 
-        </div>
-
-      <div class="second_store">
-        <h2>Harriett's Books</h2>
-        <p>Named after Harriett Tubman, Harriett's Books in Philadelphia, PA celebrates female activists and authors.
-           this Philadelphia bookshop celebrates female activists and authors. The store is also running a program, called
-           "Essentials for Essentials" where customers can purchase books that go directly to essential workers fighting the coronavirus.
-        </p>
-      </div>
-      <div class="second_store_img">
-        <img src="images/harriettsstorefront.jpg" class="storefront" alt="Harriett's Books Storefront">
-        <img src="images/harriettsbookmap.jpg" class="storefront" alt="Harriett's Books Location Map"> 
-      </div>
-
-      <div class="third_store">
-        <h2>Literati Bookstore</h2>
-        <p>Located right in downtown Ann Arbor is our very own Literati Bookstore. Literati is an independent 
-          bookstore that has a variety of books, and a variety of events - including author readings, book clubs, 
-          and poetry nights. I love Literati; and if you are in the Ann Arbor area you should definitely check out 
-          this store!
-        </p> 
-      </div>
-      <div class="third_store_img"> 
-        <img src="images/literatistorefront.jpg" class="storefront" alt="Literati Bookstore Storefront">
-        <img src="images/literatimap.jpg" class="storefront" alt="Literati Bookstore Location Map"> 
-      </div>
       </div>
     </main>
 
     <footer>
-      <p>&copy; Designed and Developed by Katie Wolberg</p>
+      <div class = 'footer-items'>
+        <a href="mailto:kwolberg@umich.edu" target="_blank" aria-label="Email contact">
+          <i aria-hidden="true" class="far fa-envelope fa-3x" title="Email contact"></i></a>
+        <a href='https://linkedin.com/in/katelyn-wolberg-a344b4146' target="_blank" aria-label="Linkedin connect">
+        <i aria-hidden="true" class="fab fa-linkedin-in fa-3x" title="Linkedin connect"></i>
+        </a>
+        <a href="https://open.spotify.com/user/ktgirlmusic?si=OTjwIjWNQz--cUZbDPk93A" target="_blank" aria_label="Spotify profile">
+          <i aria-hidden="true" class="fab fa-spotify fa-3x" title= "Spotify profile"></i></a>
+      </div>
+      <div class='copyright'>
+        &copy; Designed and Developed by Katie Wolberg
+      </div>
     </footer>
   </body>
 </html>

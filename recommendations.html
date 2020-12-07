@@ -5,84 +5,163 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="css/html5reset.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script src="https://kit.fontawesome.com/8db82a5711.js" crossorigin="anonymous"></script>
     <title>Portfolio</title>
   </head>
   <body>
     <div id="skip"><a href="#main">Skip to Main Content</a></div>
     <header>
       <nav>
+        <button onclick = "navClick()" id="button" class="button"><i class="fa fa-bars fa-2x"></i></button>
+        <div class= "nav-menu" id = "nav-menu">
           <ul>
-            <li class="item"><a href="index.html">Home</a></li>
-            <li class="item"><a class= "current" href="recommendations.html">Book Recommendations</a></li>
-            <li class="item"><a href="stores.html">Book Stores</a></li>
-            <li class="item"><a href="about.html">About Me</a></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a class="current"  href="recommendations.html">Recommendations</a></li>
+            <li><a href="stores.html">Stores</a></li>
+            <li><a href="about.html">About Me</a></li>
+            <li><a href="contact.html">Contact</a></li>
           </ul>
+        </div>
       </nav>
-      <div class = "header_image">
-          <h1>Book Recommendations</h1>
-      </div>
+      <script>
+        function navClick () {  
+          x = document.getElementById("nav-menu")
+          if (x.style.display === "block") {
+            x.style.display = "none";
+          }
+          else {
+            x.style.display = "block";
+          }
+        }
+      </script>
     </header>
+    <div class = "rec-head-container">
+      <h1>Book Recommendations</h1>
+      <p>read something new!</p>
+    </div>
 
     <main id="main">
-      <div class="books">
-
-        <div class="descriptor">
-          <h2>Recent Favorites</h2>
+      <div class="books-container">
+        <h2 class="rec-headers1">Recent Favorites</h2>
+        <button onclick="onClick()" id="button-list">View List (5 Books)</button>
+        <div id="book-list"><i>Normal People</i> by Sally Rooney<br>
+          <i>Three Women</i> by Lisa Taddeo<br>
+          <i>There There</i> by Tommy Orange
         </div>
-
-        <div class="first_recent">
-          <img src="images/normalpeople.jpg" class="image1" alt="Normal People Book Cover">
-        </div>
-
-        <div class="second_recent">
-          <img src="images/threewomen.jpg" class="image2" alt="There There Book Cover">
-        </div>
-
-        <div class="third_recent">
-          <img src="images/therethere.jpg" class= "image3" alt="Three Women Book Cover">
-        </div>
-
-
-        <div class="descriptor">
-          <h2>Timeless Favorites</h2>
-        </div>
-
-        <div class="first_oat">
-          <img src="images/littlelife.jpg" class="image4" alt="A Little Life Book Cover">
-        </div>
-
-        <div class="second_oat">
-          <img src="images/harrypotter.jpg" class="image5" alt="Harry Potter Book Cover">
-        </div>
-
-        <div class="third_oat">
-          <img src="images/memoirsofgeisha.jpg" class="image6" alt="Memoirs of a Geisha Book Cover">
-        </div>
-        
-      </div>
-
-
-      <div class="descriptor">
-        <h2>Written by Minority/ POC/ Female Authors</h2>
-      </div>
+        <script>
+          function onClick() {
+            var x = document.getElementById("book-list");
+            var y = document.getElementById("button-list");
+            if (x.style.display == 'none') {
+              x.style.display = 'block';
+              y.innerHTML = "Hide List"; 
+            } 
+            else {
+              x.style.display = 'none';
+              y.innerHTML = "View List (5 Books)"; 
+            }
+            console.log("button clicked");
+          }
+        </script>
       
-      <div class= "first_important">
-        <img src="images/salvagethebones.jpg" class="image7" alt="Salvage the Bones Book Cover">
-      </div>
+        <div class="recent-reads" tabindex="0">
+          <figure>
+            <img src="images/normalpeople.jpg" alt="Normal People Book Cover" class="book1"/>
+          </figure>
 
-      <div class = "second_important">
-        <img src="images/americanah.jpg" class="image8" alt="Americanah Book Cover">
-      </div>
+          <figure>
+            <img src="images/threewomen.jpg" alt="Three Women Cover"/>
+          </figure>
+          <figure>
+            <img src="images/therethere.jpg" alt="There There Cover"/>
+          </figure>
+        </div>
 
-      <div class="third_important">
-        <img src="images/nickelboys.jpg" class="image9" alt="Nickel Boys Book Cover">
-      </div>
+        <h2 class="rec-headers2">Timeless Favorites</h2>
+        <button onclick="onClick2()" id="button-list2">View List (5 Books)</button>
+        <div id="book-list2"><i>A Little Life</i> by Hanya Yanagihara<br>
+          <i>Harry Potter and the Goblet of Fire</i> by J.K. Rowling<br>
+          <i>Memoirs of a Geisha</i> by Arthur Golden
+        </div>
+        <script>
+          function onClick2() {
+            var x = document.getElementById("book-list2");
+            var y = document.getElementById("button-list2");
+            if (x.style.display == 'none') {
+              x.style.display = 'block';
+              y.innerHTML = "Hide List"; 
+            } 
+            else {
+              x.style.display = 'none';
+              y.innerHTML = "View List (5 Books)"; 
+            }
+            console.log("button clicked");
+          }
+        </script>
+      
+        <div class="best-reads" tabindex="0">
+          <figure>
+            <img src="images/littlelife.jpg" alt="A Little Life Cover"/>
+          </figure>
+          <figure>
+            <img src="images/harrypotter.jpg" alt="Harry Potter Cover"/>
+          </figure>
+          <figure>
+            <img src="images/memoirsofgeisha.jpg" alt="Memoirs of a Geisha Cover"/>
+          </figure>
+        </div>
 
-    
+        <h2 class="rec-headers">Written by Minority/ POC/ Female Authors</h2>
+        <button onclick="onClick3()" id="button-list3">View List (5 Books)</button>
+        <div id="book-list3">
+          <i>Salvage the Bones</i> by Jesmyn Ward<br>
+          <i>Americanah</i> by Chimamanda Ngozi Adichie<br>
+          <i>The Nickel Boys</i> by Colson Whitehead
+        </div>
+        <script>
+          function onClick3() {
+            var x = document.getElementById("book-list3");
+            var y = document.getElementById("button-list3");
+            if (x.style.display == 'none') {
+              x.style.display = 'block';
+              y.innerHTML = "Hide List"; 
+            } 
+            else {
+              x.style.display = 'none';
+              y.innerHTML = "View List (5 Books)"; 
+            }
+            console.log("button clicked");
+          }
+        </script>
+      
+        <div class="should-reads" tabindex="0">
+          <figure>
+            <img src="images/salvagethebones.jpg" alt="Salvage the Bones Cover"/>
+          </figure>
+          <figure>
+            <img src="images/americanah.jpg" alt= "Americanah Cover"/>
+          </figure>
+          <figure>
+            <img src="images/nickelboys.jpg" alt="Nickel Boys Cover"/>
+          </figure>
+        </div>
+
+      </div>
     </main>
 
     <footer>
-      <p> &copy; Designed and Developed by Katie Wolberg</p>
+      <div class = 'footer-items'>
+        <a href="mailto:kwolberg@umich.edu" target="_blank" aria-label="Email contact">
+          <i aria-hidden="true" class="far fa-envelope fa-3x" title="Email contact"></i></a>
+        <a href='https://linkedin.com/in/katelyn-wolberg-a344b4146' target="_blank" aria-label="Linkedin connect">
+        <i aria-hidden="true" class="fab fa-linkedin-in fa-3x" title="Linkedin connect"></i>
+        </a>
+        <a href="https://open.spotify.com/user/ktgirlmusic?si=OTjwIjWNQz--cUZbDPk93A" target="_blank" aria_label="Spotify profile">
+          <i aria-hidden="true" class="fab fa-spotify fa-3x" title= "Spotify profile"></i></a>
+      </div>
+      <div class='copyright'>
+        &copy; Designed and Developed by Katie Wolberg
+      </div>
     </footer>
   </body>
 </html>

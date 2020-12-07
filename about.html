@@ -5,54 +5,80 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="css/html5reset.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script src="https://kit.fontawesome.com/8db82a5711.js" crossorigin="anonymous"></script>
     <title>Portfolio</title>
   </head>
   <body>
     <div id="skip"><a href="#main">Skip to Main Content</a></div>
     <header>
       <nav>
+        <button onclick = "navClick()" id="button" class="button"><i class="fa fa-bars fa-2x"></i></button>
+        <div class= "nav-menu" id = "nav-menu">
           <ul>
-            <li class="item"><a href="index.html">Home</a></li>
-            <li class="item"><a href="recommendations.html">Book Recommendations</a></li>
-            <li class="item"><a href="stores.html">Book Stores</a></li>
-            <li class="item"><a class= "current" href="about.html">About Me</a></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="recommendations.html">Recommendations</a></li>
+            <li><a href="stores.html">Stores</a></li>
+            <li><a class="current" href="about.html">About Me</a></li>
+            <li><a href="contact.html">Contact</a></li>
           </ul>
+        </div>
       </nav>
-      <div class = "header_image">
-          <h1>About Me!</h1>
-      </div>
+      <script>
+        function navClick () {  
+          x = document.getElementById("nav-menu")
+          if (x.style.display === "block") {
+            x.style.display = "none";
+          }
+          else {
+            x.style.display = "block";
+          }
+        }
+      </script>
     </header>
 
+    <div class = "about-head-container">
+      <h1>About Me</h1>
+    </div>
+
     <main id="main">
-      <div class="image">
-        <img src="images/personal_pic.jpg" alt="Picture of myself">
+      <div class="about-container">
+        <div class="about-item item1"> <img src="images/backpacking.jpg" alt="Backpackers on a Mountain"> </div>
+        <div class="about-item item2"> <img src="images/backpackers.jpg" alt="Backpackers Hiking next to Rock Formation"> </div>
+        <div class="about-item item3"> <img src="images/personal_picture.jpg" alt="Me and a Friend at a Waterfall"> </div>
+        <div class="about-item item4"> <img src="images/mountain_sunset.jpg" alt="Sunrise over a Mountain"></div>
+        <div class="about-item item5"> <img src="images/sanfrancisco.jpg" alt="San Francisco on the Trolley"> </div>
+        <div class="about-item item6"> <img src="images/me-in-mud.jpg" alt="Muddy on a Camping Trip"> </div>
+        <div class="about-item item7">  <img src="images/bookandcoffee.jpg" alt="Books and Coffee"></div>
+        <div class="about-item item8"> <img src="images/michigan-shoes.jpg" alt="Shoes at the Football Stadium"></div>
+        <div class="about-item item9"><img src="images/carrying-canoe.jpg" alt="Me Portaging a Canoe"></div>
       </div>
+
       <p class='aboutme'> Hi! My name is Katie Wolberg. I am a junior at the University of Michigan School of Information
         focusing in Information Analytics and minoring in Environmental Science. When tasked with creating a personal
         portfolio, I knew mine would have to be about books! I love reading and always am on the hunt for my 
         next book. By creating this website, I hope to share my passions with you!
-      </p>
-      <div class="image">
-        <img src="images/bookandcoffee.jpg" alt="Image of a Book with a Coffee"> 
-      </div>
-
-      <p class='aboutme'>In my free time (when I'm not reading) I love exploring the outdoors! (hence the Environmental Science minor)
+        <br>
+        <br>
+        In my free time (when I'm not reading) I love exploring the outdoors! (hence the Environmental Science minor)
         Last March, I went to Big Bend, TX over spring break for a week long backpacking trip! I hope that I can explore other 
         National Parks soon!
       </p>
-
-      <div class="image">
-        <img src="images/backpacking.jpg" alt="Backpackers on a Mountain"> 
-        <img src="images/backpackers.jpg" alt="Backpackers Hiking next to Rock Formation"> 
-        <img src="images/mountain_sunset.jpg" alt="Sunrise over the Mountains"> 
-      </div>
-
-
     </main>
     
     
     <footer>
-      <p> &copy; Designed and Developed by Katie Wolberg</p>
+      <div class = 'footer-items'>
+        <a href="mailto:kwolberg@umich.edu" target="_blank" aria-label="Email contact">
+          <i aria-hidden="true" class="far fa-envelope fa-3x" title="Email contact"></i></a>
+        <a href='https://linkedin.com/in/katelyn-wolberg-a344b4146' target="_blank" aria-label="Linkedin connect">
+        <i aria-hidden="true" class="fab fa-linkedin-in fa-3x" title="Linkedin connect"></i>
+        </a>
+        <a href="https://open.spotify.com/user/ktgirlmusic?si=OTjwIjWNQz--cUZbDPk93A" target="_blank" aria_label="Spotify profile">
+          <i aria-hidden="true" class="fab fa-spotify fa-3x" title= "Spotify profile"></i></a>
+      </div>
+      <div class='copyright'>
+        &copy; Designed and Developed by Katie Wolberg
+      </div>
     </footer>
   </body>
 </html>

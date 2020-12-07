@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/html5reset.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script src="https://kit.fontawesome.com/8db82a5711.js" crossorigin="anonymous"></script>
+    <title>Portfolio</title>
+  </head>
+  <body>
+    <div id="skip"><a href="#main">Skip to Main Content</a></div>
+    <header>
+      <nav>
+        <button onclick = "navClick()" id="button" class="button"><i class="fa fa-bars fa-2x"></i></button>
+        <div class= "nav-menu" id = "nav-menu">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="recommendations.html">Recommendations</a></li>
+            <li><a href="stores.html">Stores</a></li>
+            <li><a href="about.html">About Me</a></li>
+            <li><a class="current" href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+      </nav>
+      <script>
+        function navClick () {  
+          x = document.getElementById("nav-menu")
+          if (x.style.display === "block") {
+            x.style.display = "none";
+          }
+          else {
+            x.style.display = "block";
+          }
+        }
+      </script>
+    </header>
+
+    <div class = "contact-head-container">
+      <h1>Contact Me</h1>
+      <p>want to get in touch?</p>
+    </div>
+
+    <div class="parallax"></div>
+
+    <main id="main">
+      <div class="contact-container">
+        <form action="https://formspree.io/f/xrgoangl" method="POST">
+          <legend>Contact Me:</legend>
+            <label for="fname">First Name</label>
+            <input type="text" id="fname" name="firstname" placeholder="Enter your first name">
+  
+            <label for="lname">Last Name</label>
+            <input type="text" id="lname" name="lastname" placeholder="Enter your last name">
+  
+            <label for="email">Email</label>
+            <input type="text" id="email" name="email" placeholder="Enter your email">
+  
+            <label for="subject">Leave A Message</label>
+            <textarea id="subject" name="subject" placeholder="Enter your message" style="height:200px"></textarea>
+  
+            <input type="submit" value="Submit">
+        </form>
+      </div>
+    </main>
+
+    <footer>
+      <div class = 'footer-items'>
+        <a href="mailto:kwolberg@umich.edu" target="_blank" aria-label="Email contact">
+          <i aria-hidden="true" class="far fa-envelope fa-3x" title="Email contact"></i></a>
+        <a href='https://linkedin.com/in/katelyn-wolberg-a344b4146' target="_blank" aria-label="Linkedin connect">
+        <i aria-hidden="true" class="fab fa-linkedin-in fa-3x" title="Linkedin connect"></i>
+        </a>
+        <a href="https://open.spotify.com/user/ktgirlmusic?si=OTjwIjWNQz--cUZbDPk93A" target="_blank" aria_label="Spotify profile">
+          <i aria-hidden="true" class="fab fa-spotify fa-3x" title= "Spotify profile"></i></a>
+      </div>
+      <div class='copyright'>
+        &copy; Designed and Developed by Katie Wolberg
+      </div>
+    </footer>
+  </body>
+</html>

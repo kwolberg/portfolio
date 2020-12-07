@@ -5,61 +5,113 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="css/html5reset.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script src="https://kit.fontawesome.com/8db82a5711.js" crossorigin="anonymous"></script>
     <title>Portfolio</title>
   </head>
 
-
   <body>
-    <div id="skip"><a href="#main">Skip to Main Content</a></div>
+    <div id="skip"><a href="#main-content">Skip to Main Content</a></div>
     <header>
       <nav>
+        <button onclick = "navClick()" id="button" class="button"><i class="fa fa-bars fa-2x"></i></button>
+        <div class= "nav-menu" id = "nav-menu">
           <ul>
-            <li class="item"><a class="current" href="index.html">Home</a></li>
-            <li class="item"><a href="recommendations.html">Book Recommendations</a></li>
-            <li class="item"><a href="stores.html">Book Stores</a></li>
-            <li class="item"><a href="about.html">About Me</a></li>
+            <li><a class="current" href="index.html">Home</a></li>
+            <li><a href="recommendations.html">Recommendations</a></li>
+            <li><a href="stores.html">Stores</a></li>
+            <li><a href="about.html">About Me</a></li>
+            <li><a href="contact.html">Contact</a></li>
           </ul>
+        </div>
       </nav>
-      <div class = "header_image">
-          <h1>Welcome!</h1>
-      </div>
+      <script>
+        function navClick () {  
+          x = document.getElementById("nav-menu")
+          if (x.style.display === "block") {
+            x.style.display = "none";
+          }
+          else {
+            x.style.display = "block";
+          }
+        }
+      </script>
     </header>
 
-   
+    <div class = "header-container">
+      <div class="slide">
+        <h1> Welcome!</h1>
+      </div>
+      <div class="second-slide">
+        <p>a website dedicated to all things books</p>
+      </div>
+    </div>
 
     <main id= "main">
-      <div class = "book-recommendation-page">
+      <div class = "book-recommendation-page" id="main-content">
         <h2 class="content-heads">Book Recommendations</h2>
-        <button onclick="location.href='https://kwolberg.github.io/portfolio/recommendations.html'" type="button">
+        <button onclick="location.href='https://kwolberg.github.io/portfolio/recommendations.html'" class ="home-button" type="button">
           Learn More</button>
         <p>Here, you can find my book recommendations! There are multiple 'sections' of recommendations - that including
           my recent favorites, the best (in my opinion) of all time, and books written by women/ minority/ POC. 
         </p>
-          <img src="images/bookcollage1.jpg" class="bookcollage" alt="Collage of Books">
       </div>
+      <div class='collage1'>
+        <img src="images/bookcollage1.jpg" class="bookcollage1" alt="Collage of Books">
+      </div>
+      <hr>
 
       <div class = "book-store-page">
         <h2 class="content-heads">Book Stores</h2>
-        <button onclick="location.href='https://kwolberg.github.io/portfolio/stores.html'" type="button">
+        <button onclick="location.href='https://kwolberg.github.io/portfolio/stores.html'" class ="home-button"  type="button">
           Learn More</button>
         <p>Here, you can find my book store recommendations! It is important to support local book stores, as well as women/ minority/ POC/ independent book stores! On this page, is a list of different book
           stores (and online independent stores) so that you can not only enjoy the book you read, but also know that it comes from a good place.
         </p>
-          <img src="images/bookcollage2.jpg" class="bookcollage" alt="Collage of Books">
       </div>
+      <div class='collage2'>
+        <img src="images/bookcollage2.jpg" class="bookcollage2" alt="Collage of Books">
+      </div>
+      <hr>
 
       <div class = "about-page">
         <h2 class="content-heads">About</h2>
-        <button onclick="location.href='https://kwolberg.github.io/portfolio/about.html'" type="button">
+        <button onclick="location.href='https://kwolberg.github.io/portfolio/about.html'" class ="home-button" type="button">
           Learn More</button>
         <p>Here, you can find out more about me, my love for books, what I am doing now, and what I hope to do in 
           the future!</p>
-          <img src="images/bookcollage3.jpg" class="bookcollage" alt="Collage of Book Recommendations">
       </div>
+      <div img class= 'collage3'>
+        <img src="images/bookcollage3.jpg" class="bookcollage3" alt="Collage of Book Recommendations">
+      </div>
+
+      <hr>
+
+      <div class = "contact-page">
+        <h2 class="content-heads">Contact Me</h2>
+        <button onclick="location.href='https://kwolberg.github.io/portfolio/contact.html'" class ="home-button" type="button">
+          Learn More</button>
+        <p>Thanks for stopping by! Want to get in touch? Go to the Contact Me page, fill out the form, and I'll be in touch as soon as possible!</p>
+      </div>
+
+      <div img class= 'collage4'>
+        <img src="images/bookcollage4.jpg" class="bookcollage4" alt="Collage of Book Recommendations">
+      </div>
+
     </main>
 
     <footer>
-      <p> &copy; Designed and Developed by Katie Wolberg</p>
+      <div class = 'footer-items'>
+        <a href="mailto:kwolberg@umich.edu" target="_blank" aria-label="Email contact">
+          <i aria-hidden="true" class="far fa-envelope fa-3x" title="Email contact"></i></a>
+        <a href='https://linkedin.com/in/katelyn-wolberg-a344b4146' target="_blank" aria-label="Linkedin connect">
+        <i aria-hidden="true" class="fab fa-linkedin-in fa-3x" title="Linkedin connect"></i>
+        </a>
+        <a href="https://open.spotify.com/user/ktgirlmusic?si=OTjwIjWNQz--cUZbDPk93A" target="_blank" aria_label="Spotify profile">
+          <i aria-hidden="true" class="fab fa-spotify fa-3x" title= "Spotify profile"></i></a>
+      </div>
+      <div class='copyright'>
+        &copy; Designed and Developed by Katie Wolberg
+      </div>
     </footer>
   </body>
 </html>

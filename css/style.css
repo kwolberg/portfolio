@@ -4,52 +4,71 @@
 html {
     scroll-behavior: smooth;
 }
+header{
+    display: block;
+}
+nav{
+    padding-top: 20px;
 
-.header_image {
-    background-size: cover;
-    background-position: center;
-    background-image: linear-gradient(rgba(255, 255, 255, 0.7),rgba(255,255,255,0.7)), url(../images/bookstack.jpg);
-    color: #000000;
-    height: 175px;
+}
+
+ul {
+	list-style-type: none;
+	margin: 1%;
+    padding-top: 50px;
+    padding-right: 10px;
+	overflow: hidden;
+    background-color: #FFF;
+}
+
+nav li a {
+	display: block;
+    text-align: right;
+    font-size: 20px;
+    padding-bottom: .5px;
+	text-decoration: none;
+}
+
+nav a, div a{
+	color: black;
+	text-decoration: none;
+}
+
+nav a:active{
+    font-weight: bold;
+}
+
+nav li:hover{
+	text-decoration: underline;
+}
+
+nav li .current{
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+#nav-menu{
+    display: none;
     width: 100%;
 }
-h1 {
-    text-align: center;
-    padding-top: 15%;
-    font-size: 160%;
-    text-shadow: 2px 2px rgb(255, 255, 255);
 
-}
-    
-
-nav ul {
-    display: flex; 
-    flex-direction: row;
-    justify-content: space-around;
-    padding: 10px;
-    background-color:#eeeeee;
+#button{
+    position: absolute;
+    right: 0; 
+    margin-right: 10px;
+    border-radius: 5px;
+    width: 65px;
+    height: 40px;
+    background-color: white;
+    color: lightgrey;
+    border: 2px solid lightgrey;  
 }
 
-li a{
-    display: flex;
-    flex-basis: 1 1 0px;
-    border: 1px solid #fff;
-    padding: 5px 5px;
-    text-align: center;
-    text-decoration: none;
-    font-size: 75%;
-    color: #fff;
-    background-color: #333;
+#button:hover{
+    color: white; 
+    background-color: lightgrey;
 }
 
-li a:hover {
-    background-color: #a9a9a9;  
-}
-
-nav .current{
-    font-weight: bold;
-    background-color: #008000; 
-}
 
 #skip a {
     background: #008000;
@@ -63,201 +82,823 @@ nav .current{
 }
 
 
-/*applies to home/index page*/
+footer{ 
+    background: lightgrey;
+}
 
-button{
-    background-color: #008000;
-    border: none;
-    border-radius: 10px;
-    color: #ffffff;
-    display: block;
-    margin: 5px auto 5px 10px;
-    padding: 2px 5px;
+.footer-items a {
+    display: inline-block; 
+    padding-left: 15%;
+    padding-top: 8%;
+    padding-bottom: 15px;
     text-decoration: none;
-    font-size: 12px;
+    color: black;
+}
+
+.footer-items a:hover{
+    color: white; 
 }
 
 
-p {
-    box-sizing: border-box;
-    text-align: left;
-    font-size: 17px;
-    padding-left: 10px;
-    padding-right: 10px;
-    hyphens: auto;
+
+.copyright {
+    text-align: center;
+    padding-bottom: 20px;
 }
 
-/*applies recommendations page*/
+
+/*applies to home/index page*/
+.header-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center; 
+    background-size: cover;
+    background-clip: content-box;
+    width: 100vw;
+    height: 89vh; 
+    margin-top: 70px; 
+    background-color:#eeecd8;
+    background-image: linear-gradient(rgba(255, 255, 255, 0.8),rgba(255,255,255,0.8)), url(../images/bookstack.jpg);
+}
+
+.slide {
+    width: 77%;
+    overflow: hidden;
+    max-width: 500px;
+ }
+ 
+ .slide h1 {
+    animation: slide 2s forwards;
+ }
+
+ .second-slide{
+    width: 100%;
+    overflow: hidden;
+    max-width: 500px;
+ }
+
+ .second-slide p{
+    animation: slide 3s forwards;
+ }
+ 
+ @keyframes slide {
+     0% {
+        transform: translateX(-800px);
+     }
+ 
+     100% {
+       transform: translateX(0px); 
+     }
+  }
+
+h1 {
+    font-size: 65px;
+    font-weight: bold;
+    color: #4D4D4D;
+    text-shadow: 5px 2px whitesmoke; 
+}
+
+
+.home-button{
+    display: block;
+    margin-top: 3%;
+    margin-bottom: 3%;
+    margin-left: auto;
+    margin-right: auto;
+    color: #fff;
+    backface-visibility: hidden;
+    border: 0.3rem solid transparent;
+    border-radius: 1.2rem;
+    padding: 0.7rem 2rem;
+    font-weight: 700;
+    font-size: 16px;
+    color: black;
+}
+
+.home-button:hover{
+    background-image: linear-gradient(#7ee8fa,#80ff72);
+    
+}
+
 h2 {
-    padding-left: 10px;
-    font-size: 25px;
-}
-
-.content-heads {
-    font-size: 20px;
-    padding-top: 5px;
+    font-size: 24px;
+    text-align: center;
+    margin-top: 7%;
+    margin-bottom: 3%; 
     text-decoration: underline;
 }
 
-.bookcollage {
-    height: 150px;
-    width: 350px;
+p{
+    font-size: 17px;
+    padding: 5px 15px;  
+}
+
+
+.bookcollage1, .bookcollage2, .bookcollage3, .bookcollage4 {
+    max-width: 92%;
     display: block;
     padding-top: 10px;
     padding-bottom: 2px;
     margin-left: auto;
     margin-right: auto;
-    filter: grayscale(100%);
+    padding-bottom: 10%;
+}
+
+.book-recommendation-page, .book-store-page, .about-page, .contact-page{
+    padding-bottom: 5%; 
+}
+
+
+hr {
+    display: block; 
+    margin-left: 1em;
+    margin-right: 1em; 
+    overflow: hidden; 
+    border-width: 2px;
 
 }
 
-.bookstores{ 
-    height: 200px;
-    width: 300px;
-    display: block;
-    padding-top: 5px;
-    margin-left: auto;
-    margin-right: auto;
-    -webkit-filter: grayscale(100%);
-    filter: grayscale(100%)
+
+/*applies recommendations page*/
+.rec-head-container h1{
+    font-size: 45px;
+    text-align: center;
+    font-weight: bold;
+    color: #4D4D4D;
+    text-shadow: 5px 2px whitesmoke;  
+}
+.rec-head-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center; 
+    background-size: cover;
+    background-clip: content-box;
+    width: 100vw;
+    height: 89vh; 
+    margin-top: 70px; 
+    background-color: #d4ffa3; 
     
 }
 
+.books-container{
+    display: flex;
+    flex-wrap: wrap;
+}
 
-.descriptor {
-    text-align: center;
-    padding-top: 10px;
-    padding-bottom: 10px;
+.recent-reads, .best-reads, .should-reads{
+    display: flex;
+    width: 100vw;
+    height: 43vh;
+    overflow-y: scroll;
+    margin: 15px;
+    border: 1px solid white; 
+}
+
+figure {
+    width: 100%; /*300px;*/
+    margin: 10px;
+    flex-basis: 300px;
+}
+
+figure img {
+    height: 40vh; /*needs to be bigger for mobile view*/
+    width: 50vw;
+    border-radius: 10px;
+    border: 1px solid #a9a9a9;
+}
+
+.rec-headers1, .rec-headers2 {
+    font-size: 25px;
+    margin-left: auto;
+    margin-right: auto;
     text-decoration: underline;
 
 }
-
-
-.image1, .image2, .image3, .image4, .image5, .image6, .image7, .image8, .image9{
-    display: block;
-    margin-right: auto;
-    margin-left: auto;
-    height: 30vh;
-    width: 20vh;
-    border: 1px solid #a9a9a9; 
-    margin-top: .5em;
-    margin-bottom: .5em;
-
+.rec-headers{
+    font-size: 25px;
+    text-align: center;
+    text-decoration: underline;
 }
 
+#button-list, #button-list2, #button-list3 {
+    background-color: #008000;
+    border: none;
+    border-radius: 125px;
+    color: #ffffff;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 2px 5px;
+    text-decoration: none;
+    font-size: 20px;
+    height: 30px; 
+    width: 80%; 
+}
 
+#book-list, #book-list2, #book-list3{
+    display:none;
+    text-align: center;
+    font-size: 20px;
+    text-align: left;
+    margin-left: 25px; 
+    margin-right: auto;
+}
+  
 
 /*applies to stores page*/
+
+.stores-head-container h1{
+    font-size: 50px;
+    text-align: center;
+    font-weight: bold;
+    color: #4D4D4D;
+    text-shadow: 5px 2px whitesmoke;  
+}
+.stores-head-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center; 
+    background-size: cover;
+    background-clip: content-box;
+    width: 100vw;
+    height: 89vh; 
+    margin-top: 70px; 
+    background-color: #00d8b1; 
+    
+}
 h3 { 
     text-align: center;
 
 }
-
-
-#container{
-    display: grid;
-    grid-template-rows: 1fr 1fr 1fr; 
-    grid-template-columns: 50% 50%; 
+.flip-gallery {
+    display: grid; 
+    grid-gap: 1.5em; 
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: 1fr;
+    justify-items: center;
+    padding: 10px;
 }
 
-.first_store {
-    grid-row: 1 / span 1; 
-    grid-column: 1 / span 1;
+.flipimg1, .flipimg2, .flipimg3 {
+    width: 100%;  
 }
-
-.first_store_img {
-    grid-row: 1 / span 1; 
-    grid-column: 2 / span 1;
+.flip-card-back p {
+    text-align: left; 
+    font-size: 16px; 
+    color: black; 
 }
-.second_store {
-    grid-row: 2 / span 1; 
-    grid-column: 1 / span 1;
-}
+.flip-card {
+    background-color: transparent;
+    width: 300px;
+    height: 200px;
+    perspective: 1000px; /* Remove this if you don't want the 3D effect */
+  }
 
-.second_store_img {
-    grid-row: 2 / span 1; 
-    grid-column: 2 / span 1;
-}
+  
+  .flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 1s;
+    transform-style: preserve-3d;
+  }
+  
 
-.third_store{
-    grid-row: 3 / span 1; 
-    grid-column: 1 / span 1;
-}
+  
+  .flip-card:hover .flip-card-inner,
+  .flip-card:focus-within .flip-card-inner,
+  .flip-card:active .flip-card-inner,
+  .flip-card:focus .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+  
 
-.third_store_img {
-    grid-row: 3 / span 1; 
-    grid-column: 2 / span 1;
-}
+  
+  .flip-card-front,
+  .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    /* Safari */
+    backface-visibility: hidden;
+  }
+  
+  
+  .flip-card-back {
+    background-color: #99CC66;
+    transform: rotateY(180deg);
+  }
 
 
-.first_store p, .second_store p, .third_store p{
-    padding-top: 5%;
-    padding-bottom: 10%;
-    font-size: 90%;
-    text-align: left;
-}
-
-
-
-.storefront {
-    display: block;
-    width: 90%;
-    padding-top: .5em;
-    padding-left: .5em;
+/*applies to about me page*/
+.about-head-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center; 
+    background-size: cover;
+    background-clip: content-box;
+    width: 100vw;
+    height: 89vh; 
+    margin-top: 70px; 
+    background-color: #9de5ff;
     
 }
 
-/*applies to about me page*/
+
 .aboutme {
     font-size: 100%;
-    text-align: center;
+    padding-right: 20px;
+    padding-left: 20px; 
+    padding-bottom: 15px;
+    background-color: #bedcfa; 
+    margin: 15px;
+
 }
 
-.image img{
-    display: block;
-    max-width: 80%;
-    margin-left: auto; 
-    margin-right: auto; 
-    margin-top: 1em;
-    margin-bottom: 1em;
-    border: 2px solid #000000;
+.about-container{
+    display: grid; 
+    grid-template-rows: repeat(9, .2fr);
+    grid-template-columns: 1fr;
+    grid-gap: .5em; 
 }
 
-.image img:hover {
-    border: 2px solid #008000;
+.about-item img{
+    max-width: 90%; 
+    display: block; 
+    margin-left: auto;
+    margin-right: auto;
+}
+.item1 img{
+    margin-top: 10px;
+}
+
+.about-item img:hover, .about-item img:active, .aboutme:hover, .aboutme:active{
+    border: 4px solid #9de5ff;
+}
+
+/*Applies to contact me page*/
+.contact-head-container h1{ 
+    font-size: 50px; 
+}
+
+.contact-head-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center; 
+    background-size: cover;
+    background-clip: content-box;
+    width: 100vw;
+    height: 89vh; 
+    margin-top: 70px; 
+    background-color: #51c4e9;
+}
+
+.parallax {
+    background-image: url(../images/backpacking-parallax.jpg);
+    height: 700px; 
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+legend {
+    font-size: 40px;
+    font-weight: bold;
+    margin-top: 1%; 
+    margin-bottom: 2%;
+    text-decoration: underline ;
+
+
+}
+label {
+    font-weight: bold;
+}
+input[type=text], select, textarea {
+    width: 90%; 
+    padding: 15px; 
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    margin-top: 3%; 
+    margin-bottom: 7%;
+    margin-right: 7%; 
+    resize: vertical; 
+    box-shadow: 5px 5px #E1E1E1;
+}
+
+input[type=submit]{
+    display: block; 
+    margin-bottom: 7%;
+    margin-top: 0%; 
+    color: black;
+    padding: 12px 30px;
+    border: none;
+    cursor: pointer;
+    width: 50%;
+    background-color:#E1E1E1;
+    border-radius: 10px;
+    font-size: 16px;
+
+}
+
+input[type=submit]:hover {
+    background-color: #ECE7E1;
+}
+
+.contact-container {
+    border-radius: 5px; 
+    padding-left: 5%; 
 }
 
 
 
 
-@media only screen and (min-width:768px) {
-    nav ul {
-        list-style-type: none;
-        color: #000000;
-        margin: 0;
-        padding: 0;
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
+/*Tablet View*/
+@media only screen and (min-width: 600px){
+    .slide {
+        padding-left: 220px;
+     }
+     .second-slide {
+         padding-left: 170px;
+         margin-bottom: 100px;  
+     }
+     .second-slide p{
+        font-size: 18px;
+        font-weight: bold;
+        width: 60%; 
+     }
+    .footer-items {
+        padding-top: 10px; 
+        padding-left: 36.5%; 
     }
+    .footer-items a {
+        padding-top: 10px; 
+        padding-left: 4%; 
+    }
+
+    /*Recommendations Page*/
+
+    .recent-reads, .best-reads, .should-reads {
+        height: 45vh; 
+        overflow-y: hidden;
+        margin-bottom: -20px; 
+
+    }
+
+    figure img {
+        width: 40vw;
+        height: 43vh;
+    }
+
+    .should-reads {
+        margin-bottom: 50px;
+
+    }
+
+    .rec-headers, .rec-headers1, .rec-headers2{
+        margin-left: 25px; 
+        font-size: 30px;
+        text-align: left;
+    }
+
+    #button-list,#button-list2, #button-list3 {
+        margin-right: 15%;
+        margin-left: 3%;
+        width: 60%;
+    }
+
+    #book-list,#book-list2, #book-list3 {
+        padding-top: 10px;
+        font-size: 17px;
+    }
+
+    /*Stores Page*/
+    .flip-gallery {
+        display: grid; 
+        grid-template-rows: repeat(2, 1fr);
+        grid-template-columns: repeat(4, 2fr);
+    }
+
+    .flip-card1{  
+        margin-top: 4%; 
+        grid-row: 1/1; 
+        grid-column: 1/ span 2; 
+    }
+
+    
+    .flip-card2{  
+        margin-top: 4%; 
+        grid-row: 1/1; 
+        grid-column: 3/ span 2; 
+    }
+
+    .flip-card3 {
+        grid-row: 2 / 2; 
+        grid-column: 2/ span 2; 
+        margin-bottom: 10%;
+    }
+
+
+    .flipimg1, .flipimg2, .flipimg3 {
+        height: 110%; 
+        width: 105%;  
+    }
+
+    .flip-card-back p{
+        font-size: 17px;
+    }
+    
+    /*About Page*/
+    .about-container{
+        display: grid; 
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(5, .1fr);
+    }
+
+    .about-item img{
+        max-width: 100%;
+        max-height: 130%;
+        object-fit: cover;
+    }
+
+    .item4 img{
+        padding-top: 10px; 
+    }
+
+    .item1 {
+       grid-column: 1 / 2;
+       grid-row: 1 / 2; 
+    }
+
+    .item2 {
+        grid-column: 1/ 2; 
+        grid-row: 2 / 3;  
+    }
+
+    .item3 {
+        grid-column: 1/3; 
+        grid-row: 5/6; 
+    }
+
+    .item3 img {
+        height: 50vh; 
+        width: 100%;
+        margin-left: 0px;
+    }
+
+    .itemt4 {
+        grid-column: 2/3; 
+        grid-row: 1/2; 
+    }
+
+    .item5 {
+        grid-column: 2/3; 
+        grid-row: 2/3; 
+    }
+
+    .item6 {
+        grid-column: 1/2; 
+        grid-row: 4/5; 
+    }
+
+    .item7 {
+        grid-column: 2/3; 
+        grid-row: 3/4; 
+    }
+
+    .item8{
+        grid-column: 1/2; 
+        grid-row: 3/4; 
+    }
+
+    /*Contact Page*/
+    label {
+        font-size: 24px; 
+    }
+    input[type=text], select, textarea {
+        margin-top: 1%;
+        font-size: 17px;  
+    }
+
+    .contact-h2 {
+        font-size: 30px;
+        position: absolute;
+    }
+
+    input[type=submit] {
+        font-size: 18px; 
+        margin-left: 0;
+        width: 30%;
+        margin-top: -4%; 
+        margin-bottom: 15%;
+    
+    }
+
+    
+
+/*Desktop View*/
+@media only screen and (min-width:801px) {
+    #nav-menu{
+        display: block;
+    }
+
+    #button{
+		display: none;
+	}
+    
+    ul{
+        padding-top: 10px;
+    
+    }
+
+    #nav-menu ul {
+        display:flex; 
+        flex-direction: row;
+        justify-content: flex-end;
+    }
+
+    #nav-menu li {
+        font-size: 25px;
+        margin-right: 0%;
+        padding-left: 1%;
+        padding-right: 1%;
+    }
+
+    #nav-menu li a {
+        font-size: 20px;
+    }
+
+    #nav-menu li .current{
+        display: block; 
+        text-decoration: none;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+
+    hr {
+        display: none; 
+    }
+
+    h2 {
+        font-size: 25px;
+    
+    }
+
+    p {
+        font-size: 20px;
+    }
+    
+
+    #main {
+        display: grid;
+        grid-template-rows: repeat(4, auto);
+        grid-template-columns: repeat(3,auto);
+    }
+
+    .book-recommendation-page{
+        grid-row: 1/2;
+        grid-column: 1/2;
+        padding: 10% 15% 10% 15%; 
+        padding-bottom: 20%;
+    }
+
+    .book-store-page{
+        grid-row: 2/3;
+        grid-column: 3/4;
+        padding: 10% 15% 10% 15%; 
+        padding-bottom: 20%; 
+    }
+
+    .about-page {
+        grid-row: 3/4;
+        grid-column: 1/2; 
+        padding: 10% 15% 10% 15%; 
+        padding-bottom: 20%; 
+    }
+
+    .contact-page {
+        grid-row: 4/5; 
+        grid-column: 3/4; 
+        padding: 10% 15% 10% 15%; 
+        padding-bottom: 20%; 
+
+    }
+
+    .collage1 img, .collage2 img, .collage3 img, .collage4 img{
+        display: none; 
+    }
+    .collage1{
+        grid-row: 1/2;
+        grid-column: 2/ span 2; 
+        background-image: url(../images/bookcollage1.jpg);
+        background-size: 100% 80%; 
+        background-repeat: no-repeat;
+        margin-top: 10%; 
+    }
+
+    .collage2{
+        grid-row: 2/ span 1;
+        grid-column: 1/ span 2; 
+        background-image: url(../images/bookcollage2.jpg);
+        background-size: 100% 80%; 
+        background-repeat: no-repeat;
+        margin-top: 10%; 
+    }
+
+    .collage3{
+        grid-row: 3/4;
+        grid-column: 2/ span 2; 
+        background-image: url(../images/bookcollage3.jpg);
+        background-size: 100% 80%; 
+        background-repeat: no-repeat;
+        margin-top: 10%; 
+    }
+
+    .collage4 {
+        grid-row: 4/5; 
+        grid-column: 1/ span 2; 
+        background-image: url(../images/bookcollage4.jpg);
+        background-size: 100% 80%; 
+        background-repeat: no-repeat;
+        margin-top: 10%; 
+    }
+
+    .footer-items {
+        padding-top: 10px; 
+        padding-left: 41%; 
+    }
+
+    .slide {
+        padding-left: 360px; 
+    }
+
+    .second-slide {
+        padding-left: 300px;
+
+    /* Recommendations Page */ 
+    .recent-reads, .best-reads, .should-reads {
+        height: 45vh; 
+        overflow-y: hidden;
+        margin-bottom: -20px; 
+
+    }
+
+    .should-reads {
+        margin-bottom: 100px;
+
+    }
+    figure img {
+        width: 15vw;
+        height: 43vh;
+    }
+
+   figure {
+       flex-basis: 200px;
+   }
+
+   .rec-headers, .rec-headers1, .rec-headers2{
+       margin-left: 25px; 
+       font-size: 40px;
+       margin-bottom: -10px; 
+   }
+
+   #button-list,#button-list2, #button-list3   {
+     display: none; 
+   }
+
+   #book-list, #book-list2, #book-list3{
+    display:none;
+}
+  
+
+
+
+    .contact-container {
+        border-radius: 5px; 
+        padding-left: 10%;
+    }
+
+    input[type=submit]{
+        margin-left: 0;
+        width: 20%;
+        margin-top: 0%; 
+    }
+
+    
+    
+
 
     h1{
         text-align: center;
-    }
-  
-    nav li{
-        display: inline-block;
-        margin-right: 5px;
-        padding: 25px;
-        font-size: 15px;
-        color: #FFFFFF;
-        width: 150px;
-        text-align: center;
-
-
-        transition-property: color, background-color;
-        transition-duration: 1s;
-        transition-timing-function: ease-out;
     }
 
     .image1, .image2, .image3, .image4, .image5, .image6, .image7, .image8, .image9 {
@@ -267,8 +908,6 @@ h3 {
         height: 45vh;
         width: 27vh;
     }
-
-  
 
  
     .books {

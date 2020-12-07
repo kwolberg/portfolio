@@ -25,6 +25,7 @@ nav li a {
 	display: block;
     text-align: right;
     font-size: 20px;
+    font-family: 'Lora', serif;
     padding-bottom: .5px;
 	text-decoration: none;
 }
@@ -36,6 +37,7 @@ nav a, div a{
 
 nav a:active{
     font-weight: bold;
+    font-family: 'Lora', serif;
 }
 
 nav li:hover{
@@ -45,6 +47,7 @@ nav li:hover{
 nav li .current{
     text-decoration: underline;
     font-weight: bold;
+    font-family: 'Lora', serif;
 }
 
 #nav-menu{
@@ -87,6 +90,7 @@ footer{
 }
 
 .footer-items a {
+    font-family: 'Lora', serif;
     display: inline-block; 
     padding-left: 15%;
     padding-top: 8%;
@@ -103,6 +107,7 @@ footer{
 
 .copyright {
     text-align: center;
+    font-family: 'Lora', serif;
     padding-bottom: 20px;
 }
 
@@ -123,26 +128,32 @@ footer{
 }
 
 .slide {
-    width: 77%;
+    width: 79%;
     overflow: hidden;
-    max-width: 500px;
+    max-width: 700px;
  }
  
  .slide h1 {
-    animation: slide 2s forwards;
+     -webkit-animation: slide 2s forwards;
+     -moz-animation: slide 2s forwards;
+     animation: slide 2s forwards;
  }
 
  .second-slide{
     width: 100%;
     overflow: hidden;
-    max-width: 500px;
+    max-width: 300px;
  }
 
- .second-slide p{
+ .second-slide {
+    -webkit-animation: slide 3s forwards;
+    -moz-animation: slide 3s forwards;
     animation: slide 3s forwards;
  }
+
+
  
- @keyframes slide {
+ @-webkit-keyframeskeyframes slide {
      0% {
         transform: translateX(-800px);
      }
@@ -152,12 +163,34 @@ footer{
      }
   }
 
+  @-moz-keyframeskeyframes slide {
+    0% {
+       transform: translateX(-800px);
+    }
+
+    100% {
+      transform: translateX(0px); 
+    }
+ }
+
+ @keyframes slide {
+    0% {
+       transform: translateX(-800px);
+    }
+
+    100% {
+      transform: translateX(0px); 
+    }
+ }
+
 h1 {
+    font-family: 'Lora', serif;
     font-size: 65px;
     font-weight: bold;
     color: #4D4D4D;
     text-shadow: 5px 2px whitesmoke; 
 }
+
 
 
 .home-button{
@@ -171,6 +204,7 @@ h1 {
     border: 0.3rem solid transparent;
     border-radius: 1.2rem;
     padding: 0.7rem 2rem;
+    font-family: 'Lora', serif;
     font-weight: 700;
     font-size: 16px;
     color: black;
@@ -182,6 +216,7 @@ h1 {
 }
 
 h2 {
+    font-family: 'Lora', serif;
     font-size: 24px;
     text-align: center;
     margin-top: 7%;
@@ -190,6 +225,7 @@ h2 {
 }
 
 p{
+    font-family: 'Lora', serif;
     font-size: 17px;
     padding: 5px 15px;  
 }
@@ -222,11 +258,18 @@ hr {
 
 /*applies recommendations page*/
 .rec-head-container h1{
+    font-family: 'Lora', serif;
     font-size: 45px;
     text-align: center;
     font-weight: bold;
     color: #4D4D4D;
     text-shadow: 5px 2px whitesmoke;  
+}
+
+.rec-head-container p {
+    font-family: 'Lora', serif;
+    background-color: #00d8b1;
+    font-size: 25px;
 }
 .rec-head-container {
     display: flex;
@@ -270,6 +313,7 @@ figure img {
 }
 
 .rec-headers1, .rec-headers2 {
+    font-family: 'Lora', serif;
     font-size: 25px;
     margin-left: auto;
     margin-right: auto;
@@ -277,13 +321,15 @@ figure img {
 
 }
 .rec-headers{
+    font-family: 'Lora', serif;
     font-size: 25px;
     text-align: center;
     text-decoration: underline;
 }
 
 #button-list, #button-list2, #button-list3 {
-    background-color: #008000;
+    font-family: 'Lora', serif;
+    background-color: #61b15a;
     border: none;
     border-radius: 125px;
     color: #ffffff;
@@ -298,6 +344,7 @@ figure img {
 }
 
 #book-list, #book-list2, #book-list3{
+    font-family: 'Lora', serif;
     display:none;
     text-align: center;
     font-size: 20px;
@@ -310,11 +357,19 @@ figure img {
 /*applies to stores page*/
 
 .stores-head-container h1{
-    font-size: 50px;
+    font-family: 'Lora', serif;
+    font-size: 70px;
     text-align: center;
     font-weight: bold;
     color: #4D4D4D;
     text-shadow: 5px 2px whitesmoke;  
+}
+
+.stores-head-container p {
+    font-family: 'Lora', serif;
+    background-color: #0e49b5;
+    color: white; 
+    font-size: 25px;
 }
 .stores-head-container {
     display: flex;
@@ -346,6 +401,7 @@ h3 {
     width: 100%;  
 }
 .flip-card-back p {
+    font-family: 'Lora', serif;
     text-align: left; 
     font-size: 16px; 
     color: black; 
@@ -409,9 +465,19 @@ h3 {
     background-color: #9de5ff;
     
 }
+.about-head-container h1{
+    font-family: 'Lora', serif;
+    font-size: 70px; 
+}
+.about-head-container p {
+    font-family: 'Lora', serif;
+    font-size: 25px; 
+    background-color: #9088d4;
+}
 
 
 .aboutme {
+    font-family: 'Lora', serif;
     font-size: 100%;
     padding-right: 20px;
     padding-left: 20px; 
@@ -444,7 +510,14 @@ h3 {
 
 /*Applies to contact me page*/
 .contact-head-container h1{ 
-    font-size: 50px; 
+    font-family: 'Lora', serif;
+    font-size: 70px; 
+}
+
+.contact-head-container p{
+    font-family: 'Lora', serif;
+    font-size: 25px; 
+    background-color: #54e346;
 }
 
 .contact-head-container {
@@ -471,6 +544,7 @@ h3 {
 
 
 legend {
+    font-family: 'Lora', serif;
     font-size: 40px;
     font-weight: bold;
     margin-top: 1%; 
@@ -480,9 +554,11 @@ legend {
 
 }
 label {
+    font-family: 'Lora', serif;
     font-weight: bold;
 }
 input[type=text], select, textarea {
+    font-family: 'Lora', serif;
     width: 90%; 
     padding: 15px; 
     border: 1px solid #ccc;
@@ -507,6 +583,7 @@ input[type=submit]{
     background-color:#E1E1E1;
     border-radius: 10px;
     font-size: 16px;
+    font-family: 'Lora', serif;
 
 }
 
@@ -519,28 +596,37 @@ input[type=submit]:hover {
     padding-left: 5%; 
 }
 
+.spotify{
+    margin-top: 25px; 
+    margin-left: 25px; 
+    margin-bottom: 25px;
+}
 
 
 
 /*Tablet View*/
 @media only screen and (min-width: 600px){
     .slide {
-        padding-left: 220px;
+        padding-left: 400px;
      }
      .second-slide {
-         padding-left: 170px;
+         max-width: 800px; 
+         padding-left: 320px;
          margin-bottom: 100px;  
      }
      .second-slide p{
+        font-family: 'Lora', serif;
         font-size: 18px;
         font-weight: bold;
         width: 60%; 
      }
     .footer-items {
+        font-family: 'Lora', serif;
         padding-top: 10px; 
         padding-left: 36.5%; 
     }
     .footer-items a {
+        font-family: 'Lora', serif;
         padding-top: 10px; 
         padding-left: 4%; 
     }
@@ -567,6 +653,7 @@ input[type=submit]:hover {
     .rec-headers, .rec-headers1, .rec-headers2{
         margin-left: 25px; 
         font-size: 30px;
+        font-family: 'Lora', serif;
         text-align: left;
     }
 
@@ -579,6 +666,7 @@ input[type=submit]:hover {
     #book-list,#book-list2, #book-list3 {
         padding-top: 10px;
         font-size: 17px;
+        font-family: 'Lora', serif;
     }
 
     /*Stores Page*/
@@ -613,8 +701,13 @@ input[type=submit]:hover {
         width: 105%;  
     }
 
+    .flip-card-back{
+        height: 23vh; 
+    }
+
     .flip-card-back p{
         font-size: 17px;
+        font-family: 'Lora', serif;
     }
     
     /*About Page*/
@@ -683,25 +776,43 @@ input[type=submit]:hover {
     /*Contact Page*/
     label {
         font-size: 24px; 
+        font-family: 'Lora', serif;
     }
     input[type=text], select, textarea {
         margin-top: 1%;
         font-size: 17px;  
     }
 
+    .contact-container{
+        padding: 5%; 
+        border: 2px; 
+    }
+
     .contact-h2 {
         font-size: 30px;
         position: absolute;
+        font-family: 'Lora', serif;
     }
 
     input[type=submit] {
         font-size: 18px; 
+        font-family: 'Lora', serif;
         margin-left: 0;
         width: 30%;
         margin-top: -4%; 
         margin-bottom: 15%;
     
     }
+
+  iframe {
+      margin-left: 15px; 
+  }
+
+  .iframe1{
+      margin-top: -17%;
+      margin-bottom: 5%; 
+  }
+    
 
     
 
@@ -728,6 +839,7 @@ input[type=submit]:hover {
 
     #nav-menu li {
         font-size: 25px;
+        font-family: 'Lora', serif;
         margin-right: 0%;
         padding-left: 1%;
         padding-right: 1%;
@@ -735,12 +847,14 @@ input[type=submit]:hover {
 
     #nav-menu li a {
         font-size: 20px;
+        font-family: 'Lora', serif;
     }
 
     #nav-menu li .current{
         display: block; 
         text-decoration: none;
         font-weight: bold;
+        font-family: 'Lora', serif;
         text-transform: uppercase;
     }
 
@@ -750,11 +864,13 @@ input[type=submit]:hover {
 
     h2 {
         font-size: 25px;
+        font-family: 'Lora', serif;
     
     }
 
     p {
         font-size: 20px;
+        font-family: 'Lora', serif;
     }
     
 
@@ -833,24 +949,31 @@ input[type=submit]:hover {
     }
 
     .footer-items {
+        font-family: 'Lora', serif;
         padding-top: 10px; 
         padding-left: 41%; 
     }
 
 
     .slide h1 {
-        font-size: 80px; 
+        font-size: 70px; 
+        font-family: 'Lora', serif;
     }
 
     .slide {
-        padding-left: 90px;
+        padding-left: 450px;
     }
 
     .second-slide{
-        padding-left: 270px;
+        max-width: 800px; 
+        padding-left: 378px;
     }
 
     /* Recommendations Page */ 
+    .rec-head-container h1{
+        font-size: 70px; 
+        font-family: 'Lora', serif;
+    }
     .recent-reads, .best-reads, .should-reads {
         height: 45vh; 
         overflow-y: hidden;
@@ -874,6 +997,7 @@ input[type=submit]:hover {
    .rec-headers, .rec-headers1, .rec-headers2{
        margin-left: 25px; 
        font-size: 40px;
+       font-family: 'Lora', serif;
        margin-bottom: -10px; 
    }
 
@@ -886,13 +1010,13 @@ input[type=submit]:hover {
 }
 
 .contact-container {
-    border-radius: 5px; 
-    padding-left: 10%;
+    padding: 5%; 
+    border: 2px; 
 }
 
 input[type=submit]{
     margin-left: 0;
-    width: 20%;
+    width: 0%;
     margin-top: 0%; 
 }
 
@@ -934,13 +1058,14 @@ input[type=submit]{
 
 .flip-card-back p{
     font-size: 20px;
+    font-family: 'Lora', serif;
 }
 .flip-card-front {
     height: 100svh; 
 }
 .flip-card-back {
     width: 100%; 
-    height: 40vh; 
+    height: 42vh; 
 }
 
 /*About Page*/
@@ -1031,10 +1156,74 @@ input[type=submit]{
 
 .aboutme {
     font-size: 20px;
+    font-family: 'Lora', serif;
 }
 
 
+.spotify{
+    display: grid; 
+    grid-gap: .5em; 
 
+
+}
+
+.iframe1, .iframe2 {
+    margin-right: 5%; 
+}
+.iframe1{
+    margin-top: 0%;
+    margin-bottom: 0%; 
+}
+  
+
+}
+label {
+    font-family: 'Lora', serif;
+    font-weight: bold;
+}
+input[type=text], select, textarea {
+    font-family: 'Lora', serif;
+    width: 100%; 
+    padding: 15px; 
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    margin-top: 3%; 
+    margin-bottom: 7%;
+    margin-right: 7%; 
+    resize: vertical; 
+    box-shadow: 5px 5px #E1E1E1;
+}
+
+input[type=submit]{
+    display: block; 
+    margin-bottom: 2%;
+    margin-top: 0%; 
+    color: black;
+    padding: 12px 30px;
+    border: none;
+    cursor: pointer;
+    width: 50%;
+    background-color:#E1E1E1;
+    border-radius: 10px;
+    font-size: 16px;
+    font-family: 'Lora', serif;
+
+}
+
+input[type=submit]:hover {
+    background-color: #ECE7E1;
+}
+
+.contact-container {
+    border-radius: 5px; 
+    padding-left: 5%; 
+}
+
+@media screen and (prefers-reduced-motion: reduce) {
+    #slide {
+      animation: none;
+    }
 
     
 

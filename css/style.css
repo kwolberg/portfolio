@@ -26,7 +26,7 @@ nav li a {
     text-align: right;
     font-size: 20px;
     font-family: 'Lora', serif;
-    padding-bottom: .5px;
+    padding-bottom: 3px;
 	text-decoration: none;
 }
 
@@ -41,7 +41,7 @@ nav a:active{
 }
 
 nav li:hover{
-	text-decoration: underline;
+    text-decoration: underline;
 }
 
 nav li .current{
@@ -625,7 +625,7 @@ input[type=submit]:hover {
 
     #nav-menu li .current{
         display: block; 
-        text-decoration: none;
+        text-decoration: underline;
         font-weight: bold;
         font-family: 'Lora', serif;
         text-transform: uppercase;
@@ -878,7 +878,7 @@ input[type=submit]:hover {
 
     #nav-menu li .current{
         display: block; 
-        text-decoration: none;
+        text-decoration: underline;
         font-weight: bold;
         font-family: 'Lora', serif;
         text-transform: uppercase;
@@ -1089,10 +1089,10 @@ input[type=submit]:hover {
         font-family: 'Lora', serif;
     }
     .flip-card-front {
-    height: 100svh; 
+    height: 100vh; 
     }
     .flip-card-back {
-        width: 100%; 
+        width: 105%; 
         height: 42vh; 
     }
 
@@ -1219,7 +1219,6 @@ input[type=submit]:hover {
         display: block; 
         margin-bottom: 2%;
         margin-top: 0%; 
-        color: black;
         padding: 12px 30px;
         border: none;
         cursor: pointer;

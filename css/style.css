@@ -179,7 +179,7 @@ h1 {
     margin-bottom: 3%;
     margin-left: auto;
     margin-right: auto;
-    color: #fff;
+    background-color: lightgray; 
     backface-visibility: hidden;
     border: 0.3rem solid transparent;
     border-radius: 1.2rem;
@@ -191,7 +191,7 @@ h1 {
 }
 
 .home-button:hover{
-    background: #9ad3bc;
+    background: #9ad3bc; 
     
 }
 

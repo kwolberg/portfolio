@@ -292,6 +292,9 @@ figure img {
     border: 1px solid #a9a9a9;
 }
 
+.image-text {
+    display: none; 
+}
 
 figure img:hover, figure img:active {
     border: 2px solid black; 
@@ -682,6 +685,10 @@ input[type=submit]:hover {
         font-family: 'Lora', serif;
     }
 
+    .image-text {
+        display:none; 
+    }
+
     /*Stores Page*/
     .flip-gallery {
         display: grid; 
@@ -986,7 +993,7 @@ input[type=submit]:hover {
         font-family: 'Lora', serif;
     }
     .recent-reads, .best-reads, .should-reads {
-        height: 50vh; 
+        height: 54vh; 
         overflow-y: hidden;
         margin-bottom: -20px; 
 
@@ -1010,6 +1017,13 @@ input[type=submit]:hover {
        font-size: 40px;
        font-family: 'Lora', serif;
        margin-bottom: -10px; 
+    }
+    .image-text {
+        display: block; 
+        font-family: 'Lora', serif;
+        text-align: center;
+        font-size: 15px;
+
     }
 
     #button-list,#button-list2, #button-list3   {

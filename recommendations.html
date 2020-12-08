@@ -22,7 +22,7 @@
     <div id="skip"><a href="#main">Skip to Main Content</a></div>
     <header>
       <nav>
-        <button onclick = "navClick()" id="button" class="button"><i class="fa fa-bars fa-2x"></i></button>
+        <button onclick = "navClick()" id="button" class="button">menu<i class="fa fa-bars fa-2x"></i></button>
         <div class= "nav-menu" id = "nav-menu">
           <ul>
             <li><a href="index.html">Home</a></li>
@@ -35,7 +35,7 @@
       </nav>
       <script>
         function navClick () {  
-          x = document.getElementById("nav-menu")
+          let x = document.getElementById("nav-menu")
           if (x.style.display === "block") {
             x.style.display = "none";
           }
@@ -53,10 +53,13 @@
     <main id="main">
       <div class="books-container">
         <h2 class="rec-headers1">Recent Favorites</h2>
-        <button onclick="onClick()" id="button-list">View List (5 Books)</button>
+        <button onclick="onClick()" id="button-list">View List (6 Books)</button>
         <div id="book-list"><i>Normal People</i> by Sally Rooney<br>
           <i>Three Women</i> by Lisa Taddeo<br>
-          <i>There There</i> by Tommy Orange
+          <i>There There</i> by Tommy Orange <br>
+          <i>American Gods</i> by Neil Gaiman<br>
+          <i>Slaughterhouse Five</i> by Kurt Vonnegut <br>
+          <i>Such a Fun Age</i> by Kiley Reid
         </div>
         <script>
           function onClick() {
@@ -85,13 +88,26 @@
           <figure>
             <img src="images/therethere.jpg" alt="There There Cover"/>
           </figure>
+          <figure>
+            <img src="images/americangods.jpg" alt="American Gods Cover">
+          </figure>
+          <figure>
+            <img src="images/slaughterhousefive.jpg" alt="Slaughterhouse Five Cover">
+          </figure>
+          <figure>
+            <img src="images/suchafunage.jpg" alt="Such a Fun Age Cover">
+          </figure>
         </div>
 
         <h2 class="rec-headers2">Timeless Favorites</h2>
-        <button onclick="onClick2()" id="button-list2">View List (5 Books)</button>
+        <button onclick="onClick2()" id="button-list2">View List (6 Books)</button>
         <div id="book-list2"><i>A Little Life</i> by Hanya Yanagihara<br>
           <i>Harry Potter and the Goblet of Fire</i> by J.K. Rowling<br>
-          <i>Memoirs of a Geisha</i> by Arthur Golden
+          <i>Memoirs of a Geisha</i> by Arthur Golden<br>
+          <i>1Q84</i> by Haruki Murakami<br>
+          <i>Unbroken</i> by Laura Hillenbrand<br>
+          <i>Mistborn: The Final Empire</i> by Brandon Sanderson<br>
+
         </div>
         <script>
           function onClick2() {
@@ -119,14 +135,26 @@
           <figure>
             <img src="images/memoirsofgeisha.jpg" alt="Memoirs of a Geisha Cover"/>
           </figure>
+          <figure>
+            <img src="images/1q84-cover.jpg" alt="1Q84 Cover">
+          </figure>
+          <figure>
+            <img src="images/unbroken.jpg" alt="Unbroken Cover">
+          </figure>
+          <figure>
+            <img src="images/mistborn-cover.jpg" alt="Mistborn Cover">
+          </figure>
         </div>
 
         <h2 class="rec-headers">Written by Minority/ POC/ Female Authors</h2>
-        <button onclick="onClick3()" id="button-list3">View List (5 Books)</button>
+        <button onclick="onClick3()" id="button-list3">View List (6 Books)</button>
         <div id="book-list3">
           <i>Salvage the Bones</i> by Jesmyn Ward<br>
           <i>Americanah</i> by Chimamanda Ngozi Adichie<br>
-          <i>The Nickel Boys</i> by Colson Whitehead
+          <i>The Nickel Boys</i> by Colson Whitehead<br>
+          <i>A Woman is No Man</i> by Etaf  Rum<br>
+          <i>Washington Black</i> by Esi Edugyan<br>
+          <i>An American Marriage</i> by Tayari Jones
         </div>
         <script>
           function onClick3() {
@@ -153,6 +181,15 @@
           </figure>
           <figure>
             <img src="images/nickelboys.jpg" alt="Nickel Boys Cover"/>
+          </figure>
+          <figure>
+            <img src="/images/awomanisnoman.jpg" alt="A Woman is No Man Cover">
+          </figure>
+          <figure>
+            <img src="/images/washington-black-cover.jpeg" alt="Washington Black Cover">
+          </figure>
+          <figure>
+            <img src="/images/anamericanmarriage.jpg" alt="An American Marriage Cover">
           </figure>
         </div>
 

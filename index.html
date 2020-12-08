@@ -24,7 +24,7 @@
     <div id="skip"><a href="#main-content">Skip to Main Content</a></div>
     <header>
       <nav>
-        <button onclick = "navClick()" id="button" class="button"><i class="fa fa-bars fa-2x"></i></button>
+        <button onclick = "navClick()" id="button" class="button">menu<i class="fa fa-bars fa-2x"></i></button>
         <div class= "nav-menu" id = "nav-menu">
           <ul>
             <li><a class="current" href="index.html">Home</a></li>
@@ -37,7 +37,7 @@
       </nav>
       <script>
         function navClick () {  
-          x = document.getElementById("nav-menu")
+          let x = document.getElementById("nav-menu")
           if (x.style.display === "block") {
             x.style.display = "none";
           }
@@ -49,11 +49,11 @@
     </header>
 
     <div class = "header-container">
-      <div class="slide">
-        <h1> Welcome!</h1>
+      <div class="wrapper">
+        <h1 class='hi'>Welcome!</h1>
       </div>
-      <div class="second-slide">
-        <p style="font-size:25px;">a website dedicated to all things books</p>
+      <div class='wrapper-text'>
+        <p>a website dedicated to all things books</p>
       </div>
     </div>
 
